@@ -1,9 +1,10 @@
 <html lang="en">
 <head>
-<title>Stefan Hawea</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Stefan Hawea - Online CV (Education)</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Stefan Hawea online CV">
+    <meta name="keywords" content="Stefan,Hawea,Stefan Hawea, Haweast.ga,Haweast">
+    <meta name="author" content="Stefan Hawea">
 </head>
     
 <style>
@@ -13,52 +14,47 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     }
-/* Style the header */
-header_left {
+/*Header Setting*/
+header {
     background-color: #6E8898;
     padding: 0px;
     text-align: right;
-    font-size: 35px;
-    color: black;
-    overflow: auto;
-    position: left;
-    width: 50%;
-    float: left;
-    height: 45%;
-    }
-header_right {
-    background-color: #6E8898;
-    padding: 0px;
-    text-align: left;
-    font-size: 35px;
-    color: black;
-    overflow: auto;
-    position: right;
-    width: 50%;
-    float: right;
-    height: 45%;
-    }
-p.Header {
-    margin: 80px 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 210px;
+    float: center;
+    overflow: hidden;
     }
     
-img.StefanFace {
+img.PictureFace{
     position: relative;
-    top: 10px;
-    left: 20px;
-    padding: 0px;
-    margin: 30px;
+    top: 15px;
+    right: -40px;
     }
     
+div.PictureFace {
+    display: table-cell;
+    width: 50%;
+    position: left;
+    }
+    
+div.middle {
+    display: table-cell;
+    width:77%;
+    position: center;
+    }
+    
+/*Nav Setting*/    
 nav {
     list-style-type: none;
     padding: 0;
     width: 25%;
-    position: right;
-    height: 100%;
-    overflow: auto;
+    position: left;
+    height: auto;
+    overflow: hidden;
     float: right;
     background-color: #3C4F76;
+    margin: 0;
     }
     
 nav ul {
@@ -81,13 +77,41 @@ li a:hover:not(.active) {
     color: white;
     }
     
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    
+/*Flexbox Setting*/
+section.row {    
+    display: flex;
+    }
+article.col {
+    flex: 1;
+    padding: 1em;
+    flex-grow: 3;
+    }
+nav.col {
+    flex: 1;
+    padding: 1em;
+    }
+    
+/*Body Setting*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+    
 article {
     float: left;
     padding: 0px;
     background-color: #9FB1BC;
     overflow: auto;
-    height: 100%;
+    height: auto;
     width: 75%;
+    overflow: auto;
     }
     
 bodytext {
@@ -95,12 +119,11 @@ bodytext {
     padding-left: 20px;
     }
     
-/* Clear floats after the columns */
-section:after {
-    content: "";
-    display: table;
-    clear: both;
+hr {
+    width: 98%;
+    margin: 0.1px;
     }
+    
 /* Style the footer */
 footer {
     background-color: #6E8898;
@@ -112,41 +135,58 @@ footer {
 </style>
     
 <body>
-    <header_right>
-        <img class="StefanFace" src="https://github.com/Haweast/Home/blob/gh-pages/Pictures/StefanFace2.png?raw=true" alt="Stefan Photo" align="middle"> 
-    </header_right>
-    <header_left>
-        <p class="Header">Hi, I'm<br><font color="#D3D0CB" size="40"><strong> Stefan Hawea</strong></font></p>
-    </header_left>
+    <header>
+        <div class="middle">
+            <div><font size="12">Hi, I'm</font></div>
+            <div><font color="#D3D0CB" size="40"><strong> Stefan Hawea</strong></font></div>
+            <div><font size="4"><i>and this is my online CV</i></font></div>
+        </div>
+        <div class="PictureFace"><img class="PictureFace" src="https://github.com/Haweast/Home/blob/gh-pages/Pictures/StefanFace2.png?raw=true" alt="Stefan Photo" align="middle"></div>
+    </header>
 
-<section>
-  <nav>
-    <ul>
-      <li><a href="http://haweast.ga/">Home</a></li>
-      <li><a class="active" href="http://education.haweast.ga/">Education</a></li>
-      <li><a href="http://workexp.haweast.ga/">Work Experience</a></li>
-      <li><a href="http://contact.haweast.ga/">Contact</a></li>
-    </ul>
-  </nav>
-  
-  <article>
-      <bodytext>
-    <h1>Personal Statement</h1>
-         <p>I’m a recent graduate with a bachelor in Information Technology.</p>
-         <p>I have interest in System Administration and Databases in IT. I am skilled at Database planning and scripting and find 
-            this very satisfying when done correctly. I am always willing to learn more and increase my knowledge and skills as much as 
-            possible. I aspire to one-day work within an industry that I can excel in and where I will be able to offer a diverse set 
-            of skills.</p>
-         <p>While studying I worked on a project to develop a CRM, this included working closely with the client.</p>
-         <p>People who have taking me on as an employee have not regretted it, I've brought great ideas to the table and 
-             carried out task correctly and in time.</p>
-      </bodytext>
-  </article>
+<section class="row">
+    <article class="col">
+        <bodytext>
+                <br>
+                <hr noshade></hr>
+            <h1>&nbsp;Personal Statement<img class="PersonIcon" src="https://github.com/Haweast/Home/blob/gh-pages/Pictures/PersonIcon.png?raw=true" alt="Personal Icon"></h1>
+                <hr noshade></hr>
+            <p>I have an interest in System Administration and Databases in IT. I am skilled at Database planning and scripting and find this very satisfying when done correctly. I am always willing to learn more and increase my knowledge and skills as much as possible. I aspire to one-day work within an industry that I can excel in and where I will be able to offer a diverse set of skills.</p> 
+            <p>While studying I worked on a project to develop a CRM, this included working closely with the client.</p>
+            <p>People who have taking me on as an employee have not regretted it, I've brought great ideas to the table and carried out tasks correctly and in within the allotted time.</p>
+            <p>Currently in my free time I have being developing this online CV, coding it on GitHub using HTML and CSS.</p>
+                <br>
+                <hr noshade></hr>
+            <h1>&nbsp;Skills<img class="SkillIcon" src="https://github.com/Haweast/Home/blob/gh-pages/Pictures/SkillIcon.png?raw=true" alt="Personal Icon"></h1>
+                <hr noshade></hr>
+            <p><strong>Communication</strong></p>
+                <p>Proven ability as a confident communicator through customer service and ideas and project presentations while working towards my degree, as well as talking with employers and customers about their needs</p>
+            <p><strong>Time Management</strong></p>
+                <p>My daily commute for many years has been from Otaki to Wellington or Porirua and I have managed my time to include all my daily tasks and study commitments in a timely manner.</p>
+            <p><strong>Teamwork</strong></p>
+                <p>I work well as an individual as well as a member of a team. I was involved in group projects while studying at Yoobee and Whitireia, where I achieved goals with others and worked with people of different ages, gender and cultures.</p>
+            <p><strong>Initiative</strong></p>
+                <p>Working with employers and students, I have had to translate ideas into projects, generating a range of options from which to choose. Along with this, I identified problems of which they were unaware.</p>
+            <p><strong>Technology</strong></p>
+                <p>Computer literate in networking, databases IT environments, entry level programming C#, basic HTML and many design software. I also have knowledge in Microsoft Office products. Most of my experience comes from Whitireia but in my free time I help family with computer problems and write documents.</p>
+        <br>
+        </bodytext>
+    </article>
+
+    <nav class="col">
+        <ul>
+        <li><a class="active" href="http://haweast.ga/">Home</a></li>
+        <li><a href="http://education.haweast.ga/">Education</a></li>
+        <li><a href="http://workexp.haweast.ga/">Work Experience</a></li>
+        <li><a href="http://contact.haweast.ga/">Contact</a></li>
+        </ul>
+    </nav>
 </section>
 
-<footer>
-  <p>Made using Github and Domain from freenom.com</p>
-</footer>
-
+    <footer>
+        <p>
+            <strong>Made using Github and Domain from freenom.com</strong>
+        </p>
+    </footer>   
 </body>
 </html>
