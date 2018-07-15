@@ -123,31 +123,37 @@ hr {
     width: 98%;
     margin: 0.1px;
     }
+    
 table {
   table-layout: fixed;
-  border: 1px solid black;
   border-width: 5px;  
   border-style: outset;
   border-collapse: collapse;
-}
+    }
+    
+tr.BoldBorder1{
+    padding: 5px;
+    border-width: 2px;  
+    border-collapse: collapse;
+    }
     
 th, td {
     padding: 5px;
     border-collapse: collapse;
     border: 1px solid black;
-}
+    }
     
 th {
     text-align: left;
-}
+    }
 
 th.RightA, td.RightA {
     text-align: right;
-}
+    }
     
 td.CenterA {
     text-align: center;
-}
+    }
     
 /* Style the footer */
 footer {
@@ -175,7 +181,7 @@ footer {
                 <br>
             <table>
                 <caption><b>Whitireia, Bachlor of Inforation Technology</b></caption>
-                <tr>
+                <tr class="BoldBorder1">
                     <th>Year</th>
                     <th>Course</th> 
                     <th style="width:100%">Title</th>
