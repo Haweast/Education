@@ -123,7 +123,9 @@ hr {
     width: 98%;
     margin: 0.1px;
     }
-    
+table {
+  table-layout: fixed;
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -135,6 +137,10 @@ th, td {
     
 th {
     text-align: left;
+}
+
+th.RightA, td.RightA {
+    text-align: right;
 }
     
 /* Style the footer */
@@ -167,14 +173,14 @@ footer {
                     <th>Course</th> 
                     <th>Title</th>
                     <th>Grade</th>
-                    <th>Credits</th>
+                    <th class="RightA">Credits</th>
                 </tr>
                 <tr>
                     <td>2017</td>
                     <td>IT7101</td>
                     <td>Project</td>
                     <td>A+</td>
-                    <td>45</td>
+                    <td class="RightA">45</td>
                 </tr>
                 <tr>
                     <td>2017</td>
